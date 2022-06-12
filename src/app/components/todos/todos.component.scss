@@ -1,0 +1,81 @@
+h1 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    user-select: none;
+
+    &:nth-child(even) {
+        background-color: #eee;
+    }
+
+    &:last-of-type {
+        border-bottom: 0;
+    }
+
+    &:first-of-type {
+        border-top: 1px solid #ddd;
+    }
+
+    .content {
+        cursor: pointer;
+    }
+
+    &.done .content {
+        text-decoration: line-through;
+    }
+}
+
+.todo-input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    appearance: none;
+    border: none;
+    background-attachment: #f3f3f3;
+    background-color: #f3f3f3;
+    font-size: 20px;
+    outline: none;
+}
+
+.todo-submit {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    appearance: none;
+    border: none;
+    outline: none;
+
+    background-color: #2c962c;
+    color: #fff;
+    margin: 15px auto;
+
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .todos {
+        margin: 10px 30vw;
+        padding: 10px 0;
+        min-height: calc(100vh - 20px);
+        border: 1px solid #d3d3d3;
+        border-radius: 10px;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0 5px;
+    }
+}
